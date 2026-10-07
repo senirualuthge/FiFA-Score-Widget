@@ -63,7 +63,4 @@ git commit -m "your message"
 git push
 ```
 
-## Repository
 
-- GitHub: [senirualuthge/FiFA-Score-Widget](https://github.com/senirualuthge/FiFA-Score-Widget)
-- Issues & PRs welcome
