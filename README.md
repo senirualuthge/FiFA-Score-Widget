@@ -1,55 +1,69 @@
-# FIFA World Cup Score Widget
+# ⚽ FIFA World Cup Score Widget
 
-An iOS app + home screen widget to track FIFA World Cup matches, live scores, and group standings using [football-data.org](https://www.football-data.org/).
-
-## About
-
-This project is an iOS SwiftUI app with a companion WidgetKit extension for quick at-a-glance World Cup scores. It fetches live data from the football-data.org API and caches results via an App Group so the widget stays up to date.
+An iOS app and home screen widget for following the FIFA World Cup: live scores, fixtures, results, and group standings, powered by [football-data.org](https://www.football-data.org/).
 
 ## Features
 
-- Live, upcoming & recent matches
-- Group standings
-- Match details with venue/stage info
-- iOS Lock/Home Screen Widget (shared cache via App Group)
+- **Live, upcoming and recent matches** with real-time scores
+- **Group standings** for every World Cup group
+- **Match details** including venue and tournament stage
+- **Home Screen and Lock Screen widget** for at-a-glance scores
+- **Shared cache via App Group** so the widget stays fresh without extra API calls
 
-## Setup (Secure API Key)
+## Tech Stack
 
-This project reads `FootballDataAPIKey` from Info.plist via `$(FOOTBALL_DATA_API_KEY)`. 
+| Area | Technology |
+|---|---|
+| UI | SwiftUI |
+| Widget | WidgetKit |
+| Data | [football-data.org](https://www.football-data.org/) REST API |
+| App ↔ Widget sharing | App Groups |
+| Config | `.xcconfig` (API key kept out of source control) |
 
-### For new clones
+## Requirements
 
-1. Copy the example config
-   ```bash
-   cd FiFA-Score-Widget
-   cp Config.example.xcconfig Config.local.xcconfig
-   ```
+- macOS with **Xcode 15+**
+- iOS **17+**
+- A free API key from [football-data.org](https://www.football-data.org/client/register)
+- An Apple ID for signing (a free account works for running on your own device)
 
-2. Add your API key to `Config.local.xcconfig`
-   ```xcconfig
-   FOOTBALL_DATA_API_KEY = YOUR_API_KEY_HERE
-   ```
+## Getting Started
 
-3. In Xcode, assign `Config.local.xcconfig` to your build configuration (Debug) for the project. The Info.plist files for both targets already reference `$(FOOTBALL_DATA_API_KEY)`.
+### 1. Clone the repo
 
-4. Run with `Cmd+R`.
+```bash
+git clone https://github.com/senirualuthge/FiFA-Score-Widget.git
+cd FiFA-Score-Widget
+```
 
-### Notes
+### 2. Add your API key
 
-- `Config.local.xcconfig` is **gitignored** - your real key stays on your machine only.
-- `Config.example.xcconfig` is committed as a template.
-- The hardcoded API key was removed from Info.plist files.
-- Never commit your real API key.
+The app reads `FootballDataAPIKey` from `Info.plist`, which resolves to `$(FOOTBALL_DATA_API_KEY)` at build time.
 
-## App Group
+```bash
+cp Config.example.xcconfig Config.local.xcconfig
+```
 
-For the widget to read cached data from the app:
-1. Open `WorldCupApp.xcodeproj` in Xcode
-2. For **both** `WorldCupApp` and `WorldCupWidgetExtension` targets:
-   - Signing & Capabilities → + App Groups
-   - Enable `group.com.cs.worldcup` (update to match your bundle ID if changed)
-3. If you change it, update `appGroupID` in `WorldCupService.swift` for both targets.
+Open `Config.local.xcconfig` and set your key:
 
+```xcconfig
+FOOTBALL_DATA_API_KEY = YOUR_API_KEY_HERE
+```
 
+Then in Xcode, assign `Config.local.xcconfig` to the **Debug** configuration for the project. Both targets' `Info.plist` files already reference the variable.
 
+> `Config.local.xcconfig` is gitignored, so your real key stays on your machine. Never commit it.
 
+### 3. Configure the App Group
+
+The widget reads cached data written by the app through a shared App Group.
+
+1. Open `WorldCupApp.xcodeproj` in Xcode.
+2. For **both** the `WorldCupApp` and `WorldCupWidgetExtension` targets, go to **Signing & Capabilities → + Capability → App Groups**.
+3. Enable `group.com.cs.worldcup`.
+
+If you change your bundle IDs and need a different group name, update `appGroupID` in `WorldCupService.swift` for both targets.
+
+### 4. Run
+
+Select the `WorldCupApp` scheme, choose a simulator or device, and press **Cmd+R**. Long-press the Home Screen and tap **+** to add the widget.
