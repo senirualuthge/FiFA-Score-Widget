@@ -45,3 +45,8 @@ git push
 ## App Group
 
 If you change the App Group ID, update `appGroupID` in `WorldCupService.swift` for both app and widget targets.
+
+## Repository
+
+- GitHub: https://github.com/senirualuthge/FiFA-Score-Widget
+- Issues/PRs welcome
