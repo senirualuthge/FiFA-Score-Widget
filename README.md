@@ -50,17 +50,6 @@ For the widget to read cached data from the app:
    - Enable `group.com.cs.worldcup` (update to match your bundle ID if changed)
 3. If you change it, update `appGroupID` in `WorldCupService.swift` for both targets.
 
-## Git Usage
 
-```bash
-git clone https://github.com/senirualuthge/FiFA-Score-Widget.git
-cd FiFA-Score-Widget
-cp Config.example.xcconfig Config.local.xcconfig
-# Edit Config.local.xcconfig with your API key
-git status
-git add .
-git commit -m "your message"
-git push
-```
 
 
