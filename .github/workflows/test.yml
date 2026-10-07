@@ -1,0 +1,114 @@
+name: Build & Test
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PROJECT: WorldCupApp.xcodeproj
+  SCHEME: WorldCupApp
+  DEVELOPER_DIR: /Applications/Xcode.app/Contents/Developer
+
+jobs:
+  test:
+    name: Build and Test
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: |
+          ls /Applications/Xcode*.app/Contents/Developer 2>/dev/null || true
+          sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+
+      - name: Find best available simulator
+        id: find-sim
+        run: |
+          # Find the newest available iPhone simulator
+          SIM=$(xcrun simctl list devices available --json 2>/dev/null | \
+            python3 -c "
+import sys, json
+data = json.load(sys.stdin)
+best = None
+for os_key, devices in data.get('devices', {}).items():
+    for d in devices:
+        if d.get('isAvailable') and 'iPhone' in d.get('name', ''):
+            # Prefer iPhone 16+ models
+            score = 2 if '16' in d.get('name', '') else 1
+            if best is None or score > best[0] or (score == best[0] and os_key > best[1]):
+                best = (score, os_key, d['name'])
+if best:
+    print(best[2])
+else:
+    print('iPhone 16 Pro')
+" 2>/dev/null | tail -1)
+          echo "Using simulator: $SIM"
+          echo "SIMULATOR_NAME=$SIM" >> $GITHUB_ENV
+
+      - name: Cache DerivedData
+        uses: actions/cache@v4
+        with:
+          path: ~/Library/Developer/Xcode/DerivedData
+          key: deriveddata-${{ runner.os }}-${{ hashFiles('**/project.pbxproj', '**/*.swift') }}
+          restore-keys: |
+            deriveddata-${{ runner.os }}-
+
+      - name: Build and Test
+        run: |
+          set -o pipefail
+          xcodebuild \
+            -project "$PROJECT" \
+            -scheme "$SCHEME" \
+            -sdk iphonesimulator \
+            -destination "platform=iOS Simulator,name=$SIMULATOR_NAME" \
+            -derivedDataPath ~/Library/Developer/Xcode/DerivedData \
+            -resultBundlePath TestResults \
+            build test \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            2>&1 | tee build.log
+
+      - name: Upload Test Results (on failure)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TestResults
+          path: TestResults.xcresult
+
+      - name: Upload Build Log (always)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: BuildLog
+          path: build.log
+
+      - name: Post test summary
+        if: always()
+        run: |
+          echo "## Test Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if grep -q "TEST SUCCEEDED" build.log; then
+            TESTS_PASSED=$(grep -c "Test case.*passed" build.log 2>/dev/null || echo "?")
+            echo ":green_circle: **All tests passed!** ($TESTS_PASSED tests)" >> $GITHUB_STEP_SUMMARY
+          elif grep -q "TEST FAILED" build.log; then
+            echo ":red_circle: **Tests failed!**" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            grep -E "FAILED|error:" build.log | head -20 >> $GITHUB_STEP_SUMMARY || true
+            echo '```' >> $GITHUB_STEP_SUMMARY
+          else
+            echo ":yellow_circle: Build completed (check artifacts for details)" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            grep -E "BUILD|error:|warning:" build.log | head -20 >> $GITHUB_STEP_SUMMARY || true
+            echo '```' >> $GITHUB_STEP_SUMMARY
+          fi
