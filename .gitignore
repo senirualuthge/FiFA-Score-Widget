@@ -1,0 +1,10 @@
+# Local API config / secrets
+*.xcconfig
+Config.local.xcconfig
+
+# Allow example config to be committed
+!Config.example.xcconfig
+
+Secrets.plist
+WorldCupApp/Secrets.plist
+WorldCupWidgetExtension/Secrets.plist
