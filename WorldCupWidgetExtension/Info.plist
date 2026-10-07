@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>FootballDataAPIKey</key>
-	<string>7295e5653ffc4382a4a7dd190478aade</string>
+	<string>$(FOOTBALL_DATA_API_KEY)</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionPointIdentifier</key>
