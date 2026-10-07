@@ -1,0 +1,369 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -scheme WorldCupApp -destination platform=macOS build
+
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:macOS, arch:arm64, id:00006000-000810CC11D2801E, name:My Mac }
+{ platform:macOS, arch:x86_64, id:00006000-000810CC11D2801E, name:My Mac }
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (2 targets)
+    Target 'WorldCupApp' in project 'WorldCupApp'
+        ➜ Explicit dependency on target 'WorldCupWidgetExtensionExtension' in project 'WorldCupApp'
+    Target 'WorldCupWidgetExtensionExtension' in project 'WorldCupApp' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 522cedd7d47be2450942c1626850922b
+Build description path: /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/XCBuildData/522cedd7d47be2450942c1626850922b.xcbuilddata
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk /Users/cs/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-688ef53f1462e2c8f657fdc38a81448fe082c4a02f00227109f4ed75e425c832.sdkstatcache
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -o /Users/cs/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-688ef53f1462e2c8f657fdc38a81448fe082c4a02f00227109f4ed75e425c832.sdkstatcache
+
+ProcessInfoPlistFile /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupWidgetExtensionExtension.appex/Contents/Info.plist /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupWidgetExtension/Info.plist (in target 'WorldCupWidgetExtensionExtension' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    builtin-infoPlistUtility /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupWidgetExtension/Info.plist -producttype com.apple.product-type.app-extension -expandbuildsettings -platform macosx -additionalcontentfile /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupWidgetExtensionExtension.build/assetcatalog_generated_info.plist -o /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupWidgetExtensionExtension.appex/Contents/Info.plist
+
+SwiftDriver WorldCupApp normal arm64 com.apple.xcode.tools.swift.compiler (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name WorldCupApp -Onone @/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp.SwiftFileList -DDEBUG -default-isolation\=MainActor -enable-bare-slash-regex -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -target arm64-apple-macos26.0 -g -module-cache-path /Users/cs/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/cs/Library/Developer/Xcode/DerivedData/WorldCupApp-dfidhoeqspkvxpcstroprrcooegj/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug -F /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug -emit-localized-strings -emit-localized-strings-path /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64 -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/cs/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-688ef53f1462e2c8f657fdc38a81448fe082c4a02f00227109f4ed75e425c832.sdkstatcache -output-file-map /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/cs/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/cs/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/cs/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp_const_extract_protocols.json -Xcc -iquote -Xcc /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp-generated-files.hmap -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp-own-target-headers.hmap -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp-all-target-headers.hmap -Xcc -iquote -Xcc /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp-project-headers.hmap -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/include -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/DerivedSources-normal/arm64 -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/DerivedSources/arm64 -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp-Swift.h -working-directory /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp -experimental-emit-module-separately -disable-cmo
+
+SwiftCompile normal arm64 Compiling\ ContentView.swift,\ F1CircuitListView.swift,\ F1ComparisonView.swift,\ F1DashboardLoader.swift,\ F1DashboardView.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/ContentView.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1CircuitListView.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1ComparisonView.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1DashboardLoader.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1DashboardView.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/ContentView.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1CircuitListView.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1ComparisonView.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1DashboardLoader.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1DashboardView.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+/Volumes/Volumn 1/Code Base/FIFA/WorldCupApp/WorldCupApp/F1DashboardView.swift:40:35: warning: value 'errorMessage' was defined but never used; consider replacing with boolean test
+                    } else if let errorMessage {
+                              ~~~~^
+                                               != nil
+
+SwiftCompile normal arm64 Compiling\ F1OverviewTab.swift,\ F1QuickStatCard.swift,\ F1RaceCalendarView.swift,\ F1Service.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1OverviewTab.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1QuickStatCard.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1RaceCalendarView.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1Service.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1OverviewTab.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1QuickStatCard.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1RaceCalendarView.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1Service.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 Compiling\ F1StandingsComponents.swift,\ F1StandingsTab.swift,\ F1StandingsView.swift,\ F1TabPicker.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1StandingsComponents.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1StandingsTab.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1StandingsView.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1TabPicker.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1StandingsComponents.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1StandingsTab.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1StandingsView.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1TabPicker.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 Compiling\ TeamSquadView.swift,\ WorldCupAppApp.swift,\ WorldCupConfigurationIntent.swift,\ WorldCupFallbackFixtures.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/TeamSquadView.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/WorldCupAppApp.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/WorldCupConfigurationIntent.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/WorldCupFallbackFixtures.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/TeamSquadView.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/WorldCupAppApp.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/WorldCupConfigurationIntent.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/WorldCupFallbackFixtures.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 Compiling\ F1LivePulseService.swift,\ F1LiveStatusBar.swift,\ F1LiveTab.swift,\ F1Models.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1LivePulseService.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1LiveStatusBar.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1LiveTab.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1Models.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1LivePulseService.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1LiveStatusBar.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1LiveTab.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1Models.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 Compiling\ F1NavComponents.swift,\ F1NextRaceCard.swift,\ F1OpenF1Models.swift,\ F1OpenF1Service.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1NavComponents.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1NextRaceCard.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1OpenF1Models.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1OpenF1Service.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1NavComponents.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1NextRaceCard.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1OpenF1Models.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1OpenF1Service.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 Compiling\ WorldCupModels.swift,\ WorldCupService.swift,\ WorldCupWallpaper.swift,\ GeneratedAssetSymbols.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/WorldCupModels.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/WorldCupService.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/WorldCupWallpaper.swift /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/WorldCupModels.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/WorldCupService.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/WorldCupWallpaper.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 Compiling\ F1ServiceProtocols.swift,\ F1SessionDetailView.swift,\ F1Settings.swift,\ F1SettingsView.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1ServiceProtocols.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1SessionDetailView.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1Settings.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1SettingsView.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1ServiceProtocols.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1SessionDetailView.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1Settings.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1SettingsView.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 Compiling\ F1TeamListView.swift,\ F1TelemetryView.swift,\ F1Wallpaper.swift,\ Secrets.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1TeamListView.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1TelemetryView.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1Wallpaper.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/Secrets.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1TeamListView.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1TelemetryView.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1Wallpaper.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/Secrets.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ WorldCupApp (in target 'WorldCupApp' from project 'WorldCupApp')
+
+EmitSwiftModule normal arm64 (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 Compiling\ F1DriverListView.swift,\ F1LastRaceCard.swift,\ F1LiveFeedMiniCard.swift,\ F1LiveFeedView.swift,\ F1LivePulseModels.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1DriverListView.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1LastRaceCard.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1LiveFeedMiniCard.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1LiveFeedView.swift /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1LivePulseModels.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1DriverListView.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1LastRaceCard.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1LiveFeedMiniCard.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1LiveFeedView.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftCompile normal arm64 /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/F1LivePulseModels.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for WorldCupApp (in target 'WorldCupApp' from project 'WorldCupApp')
+
+SwiftDriver\ Compilation\ Requirements WorldCupApp normal arm64 com.apple.xcode.tools.swift.compiler (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name WorldCupApp -Onone @/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp.SwiftFileList -DDEBUG -default-isolation\=MainActor -enable-bare-slash-regex -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -target arm64-apple-macos26.0 -g -module-cache-path /Users/cs/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/cs/Library/Developer/Xcode/DerivedData/WorldCupApp-dfidhoeqspkvxpcstroprrcooegj/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug -F /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug -emit-localized-strings -emit-localized-strings-path /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64 -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/cs/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-688ef53f1462e2c8f657fdc38a81448fe082c4a02f00227109f4ed75e425c832.sdkstatcache -output-file-map /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/cs/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/cs/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/cs/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp_const_extract_protocols.json -Xcc -iquote -Xcc /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp-generated-files.hmap -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp-own-target-headers.hmap -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp-all-target-headers.hmap -Xcc -iquote -Xcc /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp-project-headers.hmap -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/include -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/DerivedSources-normal/arm64 -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/DerivedSources/arm64 -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp-Swift.h -working-directory /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Compiling TeamSquadView.swift, WorldCupAppApp.swift, WorldCupConfigurationIntent.swift, WorldCupFallbackFixtures.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+
+Copy /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.swiftmodule/arm64-apple-macos.swiftmodule /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp.swiftmodule (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp.swiftmodule /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.swiftmodule/arm64-apple-macos.swiftmodule
+
+Copy /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.swiftmodule/arm64-apple-macos.abi.json /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp.abi.json (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp.abi.json /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.swiftmodule/arm64-apple-macos.abi.json
+
+Copy /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp.swiftsourceinfo (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp.swiftsourceinfo /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo
+
+SwiftDriverJobDiscovery normal arm64 Compiling WorldCupModels.swift, WorldCupService.swift, WorldCupWallpaper.swift, GeneratedAssetSymbols.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+
+SwiftDriverJobDiscovery normal arm64 Compiling F1LivePulseService.swift, F1LiveStatusBar.swift, F1LiveTab.swift, F1Models.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+
+SwiftDriverJobDiscovery normal arm64 Compiling F1StandingsComponents.swift, F1StandingsTab.swift, F1StandingsView.swift, F1TabPicker.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+
+SwiftDriverJobDiscovery normal arm64 Compiling F1NavComponents.swift, F1NextRaceCard.swift, F1OpenF1Models.swift, F1OpenF1Service.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+
+SwiftDriverJobDiscovery normal arm64 Compiling F1OverviewTab.swift, F1QuickStatCard.swift, F1RaceCalendarView.swift, F1Service.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+
+SwiftDriverJobDiscovery normal arm64 Compiling F1TeamListView.swift, F1TelemetryView.swift, F1Wallpaper.swift, Secrets.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+
+SwiftDriverJobDiscovery normal arm64 Compiling F1DriverListView.swift, F1LastRaceCard.swift, F1LiveFeedMiniCard.swift, F1LiveFeedView.swift, F1LivePulseModels.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+
+SwiftDriverJobDiscovery normal arm64 Compiling ContentView.swift, F1CircuitListView.swift, F1ComparisonView.swift, F1DashboardLoader.swift, F1DashboardView.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+
+SwiftDriverJobDiscovery normal arm64 Compiling F1ServiceProtocols.swift, F1SessionDetailView.swift, F1Settings.swift, F1SettingsView.swift (in target 'WorldCupApp' from project 'WorldCupApp')
+
+SwiftDriver\ Compilation WorldCupApp normal arm64 com.apple.xcode.tools.swift.compiler (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name WorldCupApp -Onone @/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp.SwiftFileList -DDEBUG -default-isolation\=MainActor -enable-bare-slash-regex -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -target arm64-apple-macos26.0 -g -module-cache-path /Users/cs/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/cs/Library/Developer/Xcode/DerivedData/WorldCupApp-dfidhoeqspkvxpcstroprrcooegj/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug -F /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug -emit-localized-strings -emit-localized-strings-path /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64 -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/cs/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-688ef53f1462e2c8f657fdc38a81448fe082c4a02f00227109f4ed75e425c832.sdkstatcache -output-file-map /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/cs/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/cs/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/cs/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp_const_extract_protocols.json -Xcc -iquote -Xcc /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp-generated-files.hmap -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp-own-target-headers.hmap -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp-all-target-headers.hmap -Xcc -iquote -Xcc /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp-project-headers.hmap -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/include -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/DerivedSources-normal/arm64 -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/DerivedSources/arm64 -Xcc -I/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp-Swift.h -working-directory /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp -experimental-emit-module-separately -disable-cmo
+
+Ld /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/MacOS/WorldCupApp.debug.dylib normal (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-macos26.0 -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -O0 -L/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -L/Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug -F/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -F/Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug -filelist /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp.LinkFileList -install_name @rpath/WorldCupApp.debug.dylib -Xlinker -rpath -Xlinker @executable_path/../Frameworks -Xlinker -object_path_lto -Xlinker /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp_lto.o -rdynamic -Xlinker -no_deduplicate -Xlinker -debug_variant -Xlinker -dependency_info -Xlinker /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp_dependency_info.dat -fobjc-link-runtime -fprofile-instr-generate -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp.swiftmodule @/Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp-linker-args.resp -Xlinker -alias -Xlinker _main -Xlinker ___debug_main_executable_dylib_entry_point -Xlinker -no_adhoc_codesign -o /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/MacOS/WorldCupApp.debug.dylib
+
+ConstructStubExecutorLinkFileList /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp-ExecutorLinkFileList-normal-arm64.txt (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    construct-stub-executor-link-file-list /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/MacOS/WorldCupApp.debug.dylib /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libPreviewsJITStubExecutor_no_swift_entry_point.a /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libPreviewsJITStubExecutor.a --output /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp-ExecutorLinkFileList-normal-arm64.txt
+note: Using stub executor library with Swift entry point. (in target 'WorldCupApp' from project 'WorldCupApp')
+
+Ld /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/MacOS/WorldCupApp normal (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-macos26.0 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -O0 -L/Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug -F/Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug -Xlinker -rpath -Xlinker @executable_path -Xlinker -rpath -Xlinker @executable_path/../Frameworks -rdynamic -Xlinker -no_deduplicate -Xlinker -debug_variant -e ___debug_blank_executor_main -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_dylib -Xlinker /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp-DebugDylibPath-normal-arm64.txt -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_instlnm -Xlinker /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp-DebugDylibInstallName-normal-arm64.txt -Xlinker -filelist -Xlinker /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp-ExecutorLinkFileList-normal-arm64.txt /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/MacOS/WorldCupApp.debug.dylib -Xlinker -no_adhoc_codesign -o /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/MacOS/WorldCupApp
+
+Copy /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/PlugIns/WorldCupWidgetExtensionExtension.appex /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupWidgetExtensionExtension.appex (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks -remove-static-executable /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupWidgetExtensionExtension.appex /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/PlugIns
+
+ProcessInfoPlistFile /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/Info.plist /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/Info.plist (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    builtin-infoPlistUtility /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp/WorldCupApp/Info.plist -producttype com.apple.product-type.application -genpkginfo /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/PkgInfo -expandbuildsettings -platform macosx -additionalcontentfile /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/assetcatalog_generated_info.plist -scanforprivacyfile /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/PlugIns/WorldCupWidgetExtensionExtension.appex -o /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/Info.plist
+
+CopySwiftLibs /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    builtin-swiftStdLibTool --copy --verbose --sign D4E7C42668F652D36C652E889B4EDAE3276FBE74 --scan-executable /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/MacOS/WorldCupApp.debug.dylib --scan-folder /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/Frameworks --scan-folder /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/PlugIns --scan-folder /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/Library/SystemExtensions --scan-folder /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/Extensions --platform macosx --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.wYVb4k/Metal.xctoolchain --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+
+ExtractAppIntentsMetadata (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.wYVb4k/Metal.xctoolchain --module-name WorldCupApp --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk --xcode-version 17F113 --platform-family macOS --deployment-target 26.0 --bundle-identifier CS.WorldCupApp --output /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/Resources --target-triple arm64-apple-macos26.0 --binary-file /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/MacOS/WorldCupApp --dependency-file /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp_dependency_info.dat --stringsdata-file /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp.SwiftFileList --metadata-file-list /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp.DependencyMetadataFileList --static-metadata-file-list /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp.DependencyStaticMetadataFileList --swift-const-vals-list /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/Objects-normal/arm64/WorldCupApp.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-07-12 01:34:35.790 appintentsmetadataprocessor[33036:554999] Starting appintentsmetadataprocessor export
+2026-07-12 01:34:35.837 appintentsmetadataprocessor[33036:554999] Writing Metadata.appintents
+2026-07-12 01:34:35.837 appintentsmetadataprocessor[33036:554999] Metadata root: /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/Resources/Metadata.appintents
+
+CodeSign /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/MacOS/WorldCupApp.debug.dylib (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+    Signing Identity:     "Apple Development: seniru2004@gmail.com (5BJ6539CBT)"
+    Provisioning Profile: "Mac Team Provisioning Profile: CS.WorldCupApp"
+                          (1b1ba2f8-114a-4629-b956-b1f2f82b4b8d)
+    
+    /usr/bin/codesign --force --sign D4E7C42668F652D36C652E889B4EDAE3276FBE74 -o runtime --timestamp\=none --generate-entitlement-der /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/MacOS/WorldCupApp.debug.dylib
+
+CodeSign /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/MacOS/__preview.dylib (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+    Signing Identity:     "Apple Development: seniru2004@gmail.com (5BJ6539CBT)"
+    Provisioning Profile: "Mac Team Provisioning Profile: CS.WorldCupApp"
+                          (1b1ba2f8-114a-4629-b956-b1f2f82b4b8d)
+    
+    /usr/bin/codesign --force --sign D4E7C42668F652D36C652E889B4EDAE3276FBE74 -o runtime --timestamp\=none --generate-entitlement-der /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/MacOS/__preview.dylib
+
+CodeSign /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    
+    Signing Identity:     "Apple Development: seniru2004@gmail.com (5BJ6539CBT)"
+    Provisioning Profile: "Mac Team Provisioning Profile: CS.WorldCupApp"
+                          (1b1ba2f8-114a-4629-b956-b1f2f82b4b8d)
+    
+    /usr/bin/codesign --force --sign D4E7C42668F652D36C652E889B4EDAE3276FBE74 -o runtime --entitlements /Users/cs/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/WorldCupApp.build/Debug/WorldCupApp.build/WorldCupApp.app.xcent --timestamp\=none --generate-entitlement-der /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app
+
+ValidateEmbeddedBinary /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/PlugIns/WorldCupWidgetExtensionExtension.appex (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    /Applications/Xcode.app/Contents/Developer/usr/bin/embeddedBinaryValidationUtility /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/PlugIns/WorldCupWidgetExtensionExtension.appex -signing-cert D4E7C42668F652D36C652E889B4EDAE3276FBE74 -info-plist-path /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app/Contents/Info.plist
+
+RegisterExecutionPolicyException /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    builtin-RegisterExecutionPolicyException /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app
+
+Validate /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    builtin-validationUtility /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app -no-validate-extension -infoplist-subpath Contents/Info.plist
+
+Touch /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    /usr/bin/touch -c /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app
+
+RegisterWithLaunchServices /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app (in target 'WorldCupApp' from project 'WorldCupApp')
+    cd /Volumes/Volumn\ 1/Code\ Base/FIFA/WorldCupApp
+    /System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Versions/Current/Support/lsregister -f -R -trusted /Users/cs/Library/Developer/Xcode/DerivedData/Build/Products/Debug/WorldCupApp.app
+
+** BUILD SUCCEEDED **
+
